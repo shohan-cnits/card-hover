@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Fredoka", sans-serif;
+}
+
+
+.wrapper-card{
+    background: #747474;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 320px;
+    height: 480px;
+    /* height: auto; */
+    overflow: hidden;
+    border-radius: 20px;
+    border: 5px solid #fff;
+    position: relative;
+}
+
+.card_image  {
+    width: 100%;
+   height: 100%;
+   object-fit: cover;
+   border-radius: 15px;
+}
+
+.card_overlay {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    position: absolute;
+    background: #1f3d477c;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    color: #fff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 2s;
+}
+
+.overlay_heading h1 {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+
+.overlay_heading_text p {
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+.overlay_heading_text p:nth-last-child(1){
+    font-size: 16px;
+    margin: 40px 0;
+    line-height: 25px;
+    font-weight: 400;
+}
+
+.card_btn {
+    display: block;
+}
+.card_btn a{
+    display: inline-block;
+    padding: 7px 20px;
+    background: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    color: #000;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    text-transform: capitalize;
+    transition:  .3s ease;
+    font-weight: 500;
+}
+
+
+.card_btn a:hover{
+    background: none;
+    color: #fff;
+}
+
+
+.card:hover .card_overlay{
+    right: 0;
+}
